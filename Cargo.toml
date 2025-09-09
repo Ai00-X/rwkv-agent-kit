@@ -1,0 +1,102 @@
+[package]
+name = "rwkv-agent-kit"
+version = "0.1.1"
+edition = "2021"
+authors = ["AI00 Team"]
+description = "RWKV-Agent-Kit: A high-performance memory system for AI applications with advanced RAG capabilities, vector-graph hybrid storage, and adaptive learning. Built with Rust for scalability and efficiency."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Ai00-X/rwkv-agent-kit"
+keywords = ["ai", "memory", "rag", "vector-database", "graph-database"]
+categories = ["science", "database", "algorithms"]
+readme = "README.md"
+
+[dependencies]
+# 异步运行时
+tokio = { version = "1.0", features = ["full"] }
+
+# 序列化
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.143"
+toml = "0.9.5"
+serde_yaml = "0.9.34-deprecated"
+
+# 数据库
+sqlx = { version = "0.8.6", features = ["runtime-tokio-rustls", "sqlite", "chrono", "uuid"] }
+
+# 时间处理
+chrono = { version = "0.4", features = ["serde"] }
+
+# UUID生成
+uuid = { version = "1.18.1", features = ["v4", "serde"] }
+
+# 错误处理
+anyhow = "1.0.99"
+thiserror = "2.0.16"
+
+# 并发
+tokio-util = "0.7.16"
+futures = "0.3"
+
+# 数学计算
+num-traits = "0.2"
+
+# 系统信息
+num_cpus = "1.0"
+
+# 日志
+log = "0.4.28"
+env_logger = "0.11.8"
+
+# 配置
+config = "0.15.15"
+
+# 缓存
+lru = "0.16.0"
+
+# 哈希
+sha2 = "0.10"
+
+# 二进制序列化
+bincode = "2.0.1"
+
+# 压缩
+flate2 = "1.0"
+
+# 向量嵌入
+model2vec-rs = "0.1.3"
+
+# 单例模式
+once_cell = "1.20.2"
+
+# 异步 trait
+async-trait = "0.1"
+
+# RWKV 核心引擎
+ai00-core = "0.6.1"
+web-rwkv = "0.10.15"
+flume = "0.11"
+
+[dev-dependencies]
+tokio-test = "0.4"
+criterion = { version = "0.7.0", features = ["html_reports"] }
+temp-env = "0.3"
+futures = "0.3"
+pretty_assertions = "1.4"
+tempfile = "3.21.0"
+
+[features]
+default = ["sqlite"]
+sqlite = []
+
+# 示例特性
+examples = []
+
+# 性能优化特性
+optimized = []
+
+# 调试特性
+debug = []
+
+ 
+
+

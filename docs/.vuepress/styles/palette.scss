@@ -1,0 +1,193 @@
+// VuePress 2 调色板文件
+// 定义主题的核心颜色变量
+
+// 主品牌色 - 深蓝色系
+$accentColor: #1e3a8a;
+$textColor: #1e293b;
+$borderColor: #e2e8f0;
+$codeBgColor: #f8fafc;
+$arrowBgColor: #cbd5e1;
+$badgeTipColor: #10b981;
+$badgeWarningColor: #f59e0b;
+$badgeErrorColor: #ef4444;
+
+// 背景色
+$bgColor: #ffffff;
+$bgColorLight: #f8fafc;
+$bgColorLighter: #f1f5f9;
+
+// 导航栏
+$navbarColor: #ffffff;
+$navbarTextColor: #1e293b;
+$navbarBgColor: rgba(255, 255, 255, 0.95);
+
+// 侧边栏
+$sidebarBgColor: #f8fafc;
+$sidebarTextColor: #64748b;
+$sidebarLinkColor: #475569;
+$sidebarLinkActiveColor: #1e3a8a;
+$sidebarLinkActiveBgColor: #dbeafe;
+
+// 代码块
+$codeColor: #1e40af;
+$codeBgColor: #f1f5f9;
+$codeGroupBgColor: #0f172a;
+$codeGroupHeaderColor: #e2e8f0;
+
+// 表格
+$tableHeaderBgColor: #1e3a8a;
+$tableHeaderColor: #ffffff;
+$tableBorderColor: #e2e8f0;
+$tableStripeBgColor: #f8fafc;
+
+// 提示框
+$tipBorderColor: #10b981;
+$tipBgColor: rgba(16, 185, 129, 0.1);
+$warningBorderColor: #f59e0b;
+$warningBgColor: rgba(245, 158, 11, 0.1);
+$dangerBorderColor: #ef4444;
+$dangerBgColor: rgba(239, 68, 68, 0.1);
+
+// 按钮
+$buttonPrimaryBg: #1e3a8a;
+$buttonPrimaryColor: #ffffff;
+$buttonPrimaryHoverBg: #1d4ed8;
+$buttonSecondaryBg: transparent;
+$buttonSecondaryColor: #1e3a8a;
+$buttonSecondaryBorder: #1e3a8a;
+
+// 链接
+$linkColor: #1e3a8a;
+$linkHoverColor: #3b82f6;
+
+// 阴影
+$boxShadowLight: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$boxShadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$boxShadowLarge: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+// 圆角
+$borderRadius: 0.5rem;
+$borderRadiusSmall: 0.375rem;
+$borderRadiusLarge: 0.75rem;
+
+// 间距
+$spacingXs: 0.25rem;
+$spacingSm: 0.5rem;
+$spacingMd: 1rem;
+$spacingLg: 1.5rem;
+$spacingXl: 2rem;
+$spacing2xl: 3rem;
+
+// 字体
+$fontFamily: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$fontFamilyCode: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+
+// 字体大小
+$fontSizeXs: 0.75rem;
+$fontSizeSm: 0.875rem;
+$fontSizeBase: 1rem;
+$fontSizeLg: 1.125rem;
+$fontSizeXl: 1.25rem;
+$fontSize2xl: 1.5rem;
+$fontSize3xl: 1.875rem;
+$fontSize4xl: 2.25rem;
+
+// 字体粗细
+$fontWeightLight: 300;
+$fontWeightNormal: 400;
+$fontWeightMedium: 500;
+$fontWeightSemibold: 600;
+$fontWeightBold: 700;
+
+// 行高
+$lineHeightTight: 1.25;
+$lineHeightNormal: 1.5;
+$lineHeightRelaxed: 1.625;
+$lineHeightLoose: 2;
+
+// 断点
+$MQNarrow: 959px;
+$MQMobile: 719px;
+$MQMobileNarrow: 419px;
+
+// 暗色主题变量
+$darkAccentColor: #60a5fa;
+$darkTextColor: #f1f5f9;
+$darkBorderColor: #334155;
+$darkCodeBgColor: #1e293b;
+$darkBgColor: #0f172a;
+$darkBgColorLight: #1e293b;
+$darkBgColorLighter: #334155;
+
+$darkNavbarColor: #1e293b;
+$darkNavbarTextColor: #f1f5f9;
+$darkNavbarBgColor: rgba(30, 41, 59, 0.95);
+
+$darkSidebarBgColor: #1e293b;
+$darkSidebarTextColor: #cbd5e1;
+$darkSidebarLinkColor: #94a3b8;
+$darkSidebarLinkActiveColor: #60a5fa;
+$darkSidebarLinkActiveBgColor: rgba(96, 165, 250, 0.1);
+
+// 响应式设计混入
+@mixin mobile {
+  @media (max-width: #{$MQMobile}) {
+    @content;
+  }
+}
+
+@mixin narrow {
+  @media (max-width: #{$MQNarrow}) {
+    @content;
+  }
+}
+
+@mixin mobile-narrow {
+  @media (max-width: #{$MQMobileNarrow}) {
+    @content;
+  }
+}
+
+// 工具类混入
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+@mixin button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

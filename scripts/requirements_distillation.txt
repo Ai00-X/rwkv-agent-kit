@@ -1,0 +1,44 @@
+# Qwen3 到 Model2Vec 蒸馏所需的依赖包
+# 
+# 使用清华源安装（推荐国内用户）：
+# pip install -r requirements_distillation.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
+#
+# 或者配置永久清华源：
+# pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
+
+# 核心依赖 - Model2Vec 蒸馏功能
+model2vec[distill]>=0.2.0
+sentence-transformers>=2.7.0
+transformers>=4.51.0
+# PyTorch 和 torchvision 版本需要匹配，避免 CUDA 版本冲突
+# 如果遇到 CUDA 版本不匹配错误，请使用以下命令重新安装：
+# pip uninstall torch torchvision torchaudio
+# 
+# 安装 CUDA 11.8 版本（推荐，支持GPU加速）：
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# 
+# 安装 CUDA 12.1 版本：
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+# 
+# 或者使用 CPU 版本（较慢）：
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.21.0
+
+
+# 工具依赖
+tqdm 
+safetensors 
+huggingface-hub 
+tokenizers 
+
+# 科学计算
+scipy 
+scikit-learn 
+
+# 可选：ONNX支持（如果需要ONNX格式输出）
+# onnx>=1.12.0
+# onnxruntime>=1.12.0
+
+ 

@@ -1,0 +1,42 @@
+# RWKV Agent Kit 正确配置示例
+# 基于项目实际的结构体定义
+
+[model]
+model_path = "./models/RWKV-7-1B5-World-v2.1-20241210-ctx4096.pth"
+max_tokens = 2048
+temperature = 0.7
+top_p = 0.9
+top_k = 40
+presence_penalty = 0.0
+frequency_penalty = 0.0
+
+# Memory配置 - 基于src/agent/config.rs中的MemoryConfig结构体
+[memory]
+enabled = true
+top_k = 10
+time_decay_factor = 0.95
+# 语义聚合配置
+[memory.semantic_clustering]
+enabled = true
+min_cluster_size = 3
+max_clusters = 50
+similarity_threshold = 0.8
+
+# Database配置 - 基于src/db/config.rs中的DatabaseConfig结构体
+[database]
+db_type = "sqlite"  # 或 "memory"
+path = "./data/agent.db"
+pool_size = 10
+timeout_seconds = 30
+auto_create_tables = true
+
+[logging]
+level = "info"
+file_path = "./logs/agent.log"
+max_file_size = "10MB"
+max_files = 5
+
+[server]
+host = "127.0.0.1"
+port = 8080
+workers = 4

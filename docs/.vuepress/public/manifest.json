@@ -1,0 +1,29 @@
+{
+  "name": "RWKV Agent Kit Documentation",
+  "short_name": "RWKV Agent Kit",
+  "description": "基于RWKV的智能体开发框架 - 具备真正记忆和思考能力的AI智能体",
+  "start_url": "/rwkv-agent-kit/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/rwkv-agent-kit/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/rwkv-agent-kit/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["developer", "documentation", "ai", "machine-learning"],
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "scope": "/rwkv-agent-kit/",
+  "prefer_related_applications": false
+}
